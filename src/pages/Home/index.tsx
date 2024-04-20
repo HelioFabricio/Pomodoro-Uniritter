@@ -8,8 +8,15 @@ import {
   Separator,
   StartCountdownButton,
 } from './styles'
+import { useState } from 'react'
 
 export function Home() {
+    // setting  tast input as a controlled component
+    const [task, setTask] = useState('')
+
+    function resetForm() {
+      setTask('')
+    }
   return (
     <HomeContainer>
       <form action="">
@@ -20,6 +27,8 @@ export function Home() {
             id="task"
             list="task-suggestions"
             placeholder="Dê um nome para a tarefa"
+            onChange={(e) => setTask(e.target.value)}
+            value={task}
           />
           <datalist id="task-suggestions">
             <option value="A3 - engenharia"></option>

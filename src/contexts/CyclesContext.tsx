@@ -5,6 +5,10 @@ import {
   interruptCurrentCycleAction,
   markCurrentCycleAsFinishedAction,
 } from '../reducers/cycles/actions'
+import {
+  checkNotificationPermission,
+  sendNotification,
+} from '../utils/notifications'
 
 interface CreateCycleData {
   task: string
@@ -44,6 +48,8 @@ export function CyclesContextProvider({
   }
 
   function createCycle(data: CreateCycleData) {
+    // TODO trazer aqui a função que confere permissao de notificação
+    checkNotificationPermission()
     const id = String(new Date().getTime())
 
     const newCycle: Cycle = {
@@ -63,6 +69,10 @@ export function CyclesContextProvider({
 
   function markCurrentCycleAsFinished() {
     dispatch(markCurrentCycleAsFinishedAction())
+
+    sendNotification('Ciclo Concluído!', {
+      body: 'Parabéns! Você concluiu um ciclo.',
+    })
   }
 
   return (

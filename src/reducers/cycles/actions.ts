@@ -15,13 +15,17 @@ export function addNewCycleAction(newCycle: Cycle) {
   }
 }
 
-export function markCurrentCycleAsFinishedAction() {
+export function markCurrentCycleAsFinishedAction(): {
+  type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED
+} {
   return {
     type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED,
   }
 }
 
-export function interruptCurrentCycleAction() {
+export function interruptCurrentCycleAction(): {
+  type: ActionTypes.INTERRUPT_CURRENT_CYCLE
+} {
   return {
     type: ActionTypes.INTERRUPT_CURRENT_CYCLE,
   }

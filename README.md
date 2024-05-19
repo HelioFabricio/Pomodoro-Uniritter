@@ -20,6 +20,13 @@ No caso de uso local siga os seguintes passos:
 3. No terminal instale as dependências utilizando `npm i`
 4. Para rodar o projeto em LocalHost: `npm run dev`
 
+## Como Personalizar o Alerta de Conclusão de Ciclo
+
+1. Abra os arquivos baixados e navegue até a pasta Assets que encontra-se em “Pomodoro-Uniritter-0.0.2/src/assets”.
+2. Altere o arquivo “alert-finished-cycle.wav” por outro de sua escolha.
+
+**lembre-se de manter o arquivo com o mesmo nome e o mesmo formato**
+
 Encorajamos o Download da release e o uso do projeto localmente como uma ferramenta de aprendizado. Fique a vontade para editar o projeto de acordo com suas preferências.
 Caso tenha alguma sugestão não hesite em abrir uma Issue ou uma PR em nosso repositório. 
 
